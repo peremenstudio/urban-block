@@ -1,0 +1,162 @@
+/* -----------------------------------------------------------------------------
+// 3. Services Page
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Section Headline
+// - Section 1 - Hero Title
+// - Section 2 - About
+// - Section 4 - Counters
+// - Section 5 - Service
+// - Section 6 - Clients
+
+
+//
+// Services Page
+// --------------------------------------------------
+.services {
+
+// Section Headline
+// --------------------------------------------------
+    .section-headline {
+        margin-bottom: 50px;
+        text-align: center;
+
+        h4 {
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+
+// Section 1 - Hero Title
+// --------------------------------------------------
+    .hero-title {
+        background-image: url(http://placehold.it/1895x800);
+    }
+
+// Section 2 - about
+// --------------------------------------------------
+    .about {
+        .item {
+            text-align: center;
+
+            .img {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+                border-radius: 100%;
+                overflow: hidden;
+
+                a {
+                    width: 200px;
+                    height: 200px;
+                    line-height: 200px;
+                    border-radius: 100%;
+
+                    i {
+                        position: absolute;
+                        right: 0;
+                        left: 0;
+                        margin: 0 auto;
+                    }
+                }
+            }
+
+            h3 {
+                text-transform: uppercase;
+                font-weight: 500;
+                color: #4b4b4b;
+                font-size: 16px;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width:992px) {
+            .item {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+// Section 4 - Counters
+// --------------------------------------------------
+    .counters {
+        padding-top: 130px;
+        background: url(http://placehold.it/1895x800) top center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+// Section 5 - Service 
+// --------------------------------------------------
+    .service {
+
+        &-headline {
+            padding: 30px 0;
+            text-align: center;
+
+            h4 {
+                font-size: 28px;
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-transform: uppercase;  
+            }   
+        }
+
+        .iconbox {
+            .icon {
+                width: 80px;
+                height: 80px;
+                background-color: #fff;
+                color: #9c9c9c;
+
+                i {
+                    font-size: 24px;
+                    line-height: 87px;
+                }
+            }
+
+            h4 {
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                .icon {
+                   background-color: $brand-color;
+                    color: #fff; 
+                }  
+            }
+        }
+    }
+
+// Section 6 - Clients 
+// --------------------------------------------------
+    .clients {
+        padding: 80px 0;
+
+        img {
+            opacity: .5;
+            @include transition(opacity, .5s);
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        @media(max-width: 992px){
+            img {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

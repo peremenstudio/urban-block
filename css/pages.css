@@ -1,0 +1,693 @@
+/*
+// Table of content
+// -----------------------------------------------------------------------------
+// - 1. Homepage
+// - 2. About Page
+// - 3. Services Page
+// - 4. Projects Page
+// - 5. Projects Detail Page
+// - 6. Contact Page
+*/
+/* -----------------------------------------------------------------------------
+// 1. Homepage
+// ----------------------------------------------------------------------------- */
+.homepage .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .homepage .section-headline h4 {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase; }
+.homepage .hero-splash {
+  position: relative;
+  height: 800px;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif; }
+  .homepage .hero-splash .splash-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    @media (max-width: 992px) {
+      .homepage .hero-splash .splash-slider img {
+        max-width: initial; } }
+  .homepage .hero-splash .align {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .homepage .hero-splash h1 {
+    padding: 0 0 15px 0;
+    color: #fff;
+    font-size: 72px;
+    font-weight: 500;
+    text-transform: uppercase; }
+    .homepage .hero-splash h1 small {
+      display: block;
+      margin-bottom: 15px;
+      text-transform: none;
+      color: #fff;
+      font-size: 50%; }
+  .homepage .hero-splash .btn-light {
+    margin-left: 10px;
+    color: #d67c79; }
+    .homepage .hero-splash .btn-light:hover {
+      color: #fff; }
+  @media (max-width: 768px) {
+    .homepage .hero-splash h1 {
+      font-size: 36px; } }
+.homepage .banner .banner-images:before, .homepage .banner .banner-images:after {
+  content: " ";
+  display: table; }
+.homepage .banner .banner-images:after {
+  clear: both; }
+.homepage .banner img + img {
+  margin-left: 20px; }
+.homepage .banner h3 {
+  margin: 0 0 30px 0;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500; }
+.homepage .banner p + p {
+  margin-top: 30px; }
+.homepage .banner .btn {
+  margin: 30px 10px 0 0; }
+@media (max-width: 1200px) {
+  .homepage .banner .banner-images {
+    margin-bottom: 30px; }
+  .homepage .banner img {
+    width: 45%;
+    float: left; }
+    .homepage .banner img + img {
+      margin-left: 10%; } }
+.homepage .counters {
+  padding: 150px 0;
+  background: url(http://placehold.it/1895x500) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .homepage .counters .progress-item {
+    text-align: center; }
+    .homepage .counters .progress-item strong {
+      font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      left: 0;
+      color: #fff;
+      font-weight: 500;
+      font-size: 30px; }
+    .homepage .counters .progress-item h4 {
+      margin-top: 40px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+  @media (max-width: 992px) {
+    .homepage .counters .progress-item {
+      margin-bottom: 30px; } }
+.homepage .gallery .item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px; }
+  .homepage .gallery .item .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #d67c79;
+    background-color: rgba(214, 124, 121, 0.85);
+    text-align: center;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+  .homepage .gallery .item a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    margin-right: 5px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s; }
+    .homepage .gallery .item a:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: #d67c79; }
+  .homepage .gallery .item .align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .homepage .gallery .item h3 {
+    margin-top: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff; }
+  .homepage .gallery .item:hover .caption {
+    opacity: 1; }
+.homepage .testimonials .section-headline {
+  margin-bottom: 30px; }
+.homepage .clients {
+  padding: 80px 0; }
+  .homepage .clients img {
+    opacity: .5;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+    .homepage .clients img:hover {
+      opacity: 1; }
+  @media (max-width: 992px) {
+    .homepage .clients img {
+      margin-bottom: 30px; } }
+
+/* -----------------------------------------------------------------------------
+// 2. About Page
+// ----------------------------------------------------------------------------- */
+.about .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .about .section-headline h4 {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase; }
+  .about .section-headline + p {
+    margin-bottom: 30px;
+    text-align: center; }
+.about .hero-title {
+  background-image: url(http://placehold.it/1895x800); }
+.about .iconbox-circle {
+  margin-bottom: 10px;
+  text-align: center;
+  /* show border on hover */ }
+  .about .iconbox-circle > .icon {
+    position: relative;
+    display: inline-block;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    background-color: #d67c79;
+    color: #fff;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    /* border animation effect  */ }
+    .about .iconbox-circle > .icon > i {
+      line-height: 87px; }
+    .about .iconbox-circle > .icon:before {
+      content: '';
+      position: absolute;
+      border: #d67c79 solid 1px;
+      border-radius: 80px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-transition: top .5s, right .5s, bottom .5s, left .5s;
+      -moz-transition: top .5s, right .5s, bottom .5s, left .5s;
+      -ms-transition: top .5s, right .5s, bottom .5s, left .5s;
+      -o-transition: top .5s, right .5s, bottom .5s, left .5s;
+      transition: top .5s, right .5s, bottom .5s, left .5s; }
+  .about .iconbox-circle h4 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    color: #4b4b4b;
+    letter-spacing: 1px; }
+  .about .iconbox-circle:hover .icon:before {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px; }
+  @media (max-width: 992px) {
+    .about .iconbox-circle {
+      margin-bottom: 30px; } }
+.about .skills {
+  background: url(http://placehold.it/1895x1200) center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff; }
+  .about .skills h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 25px; }
+  .about .skills p {
+    margin-bottom: 25px;
+    opacity: .7; }
+.about .team .person {
+  position: relative; }
+  .about .team .person .person-caption {
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+    left: 20px;
+    padding: 15px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+    .about .team .person .person-caption h4 {
+      margin: 5px 10% 15px 10%;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e5e5e5;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 1px; }
+      .about .team .person .person-caption h4 + p {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 1px; }
+  .about .team .person .person-social {
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 -1px 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #f9f9f9;
+    text-align: center; }
+    .about .team .person .person-social li {
+      display: inline; }
+      .about .team .person .person-social li a {
+        color: #c4c4c4;
+        font-size: 16px;
+        margin-right: 20px; }
+        .about .team .person .person-social li a:hover {
+          color: #d67c79; }
+      .about .team .person .person-social li:last-child a {
+        margin-right: 0; }
+  .about .team .person:hover figcaption {
+    opacity: 1; }
+@media (max-width: 992px) {
+  .about .team .person {
+    margin-bottom: 30px; } }
+.about .work .iconbox-circle {
+  width: 20%;
+  float: left;
+  padding: 0 10px; }
+  .about .work .iconbox-circle .icon {
+    background-color: #f9f9f9;
+    color: #9c9c9c;
+    width: 100px;
+    height: 100px;
+    font-size: 20px;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s; }
+    .about .work .iconbox-circle .icon i {
+      line-height: 100px; }
+    .about .work .iconbox-circle .icon:before {
+      content: none; }
+    .about .work .iconbox-circle .icon:hover {
+      background-color: #d67c79;
+      color: #fff; }
+@media (max-width: 992px) {
+  .about .work .iconbox-circle {
+    width: 50%;
+    margin-bottom: 30px; } }
+.about .cta-colored h3 {
+  margin-top: 25px;
+  font-size: 30px; }
+.about .cta-colored .btn-light {
+  color: #d67c79; }
+  .about .cta-colored .btn-light:hover {
+    color: #fff;
+    background-color: transparent; }
+.about .cta-colored .btn-colored {
+  background-color: #181818;
+  border-color: #181818; }
+  .about .cta-colored .btn-colored:hover {
+    color: #181818;
+    background-color: transparent; }
+
+/* -----------------------------------------------------------------------------
+// 3. Services Page
+// ----------------------------------------------------------------------------- */
+.services .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .services .section-headline h4 {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase; }
+.services .hero-title {
+  background-image: url(http://placehold.it/1895x800); }
+.services .about .item {
+  text-align: center; }
+  .services .about .item .img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 100%;
+    overflow: hidden; }
+    .services .about .item .img a {
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      border-radius: 100%; }
+      .services .about .item .img a i {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto; }
+  .services .about .item h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #4b4b4b;
+    font-size: 16px;
+    margin-top: 30px; }
+@media (max-width: 992px) {
+  .services .about .item {
+    margin-bottom: 30px; } }
+.services .counters {
+  padding-top: 130px;
+  background: url(http://placehold.it/1895x800) top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+.services .service-headline {
+  padding: 30px 0;
+  text-align: center; }
+  .services .service-headline h4 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+.services .service .iconbox .icon {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  color: #9c9c9c; }
+  .services .service .iconbox .icon i {
+    font-size: 24px;
+    line-height: 87px; }
+.services .service .iconbox h4 {
+  font-weight: 500;
+  text-transform: uppercase; }
+.services .service .iconbox:hover .icon {
+  background-color: #d67c79;
+  color: #fff; }
+.services .clients {
+  padding: 80px 0; }
+  .services .clients img {
+    opacity: .5;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+    .services .clients img:hover {
+      opacity: 1; }
+  @media (max-width: 992px) {
+    .services .clients img {
+      margin-bottom: 30px; } }
+
+/* -----------------------------------------------------------------------------
+// 4. Projects Page
+// ----------------------------------------------------------------------------- */
+.projects .hero-title {
+  background-image: url(http://placehold.it/1895x800); }
+.projects .gallery .item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px; }
+  .projects .gallery .item .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #d67c79;
+    background-color: rgba(214, 124, 121, 0.85);
+    text-align: center;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+  .projects .gallery .item a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    margin-right: 5px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s; }
+    .projects .gallery .item a:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: #d67c79; }
+  .projects .gallery .item .align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .projects .gallery .item h3 {
+    margin-top: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff; }
+  .projects .gallery .item:hover .caption {
+    opacity: 1; }
+
+/* -----------------------------------------------------------------------------
+// 5. Project Detail Page
+// ----------------------------------------------------------------------------- */
+.project-detail .section-headline {
+  margin-bottom: 50px;
+  text-align: center; }
+  .project-detail .section-headline h4 {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase; }
+.project-detail .hero-splash {
+  position: relative;
+  height: 800px;
+  height: 100vh;
+  text-align: center;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  background: url(http://placehold.it/1895x1150) center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .project-detail .hero-splash .align {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .project-detail .hero-splash h1 {
+    padding: 0 0 15px 0;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 500;
+    text-transform: uppercase; }
+  @media (max-width: 768px) {
+    .project-detail .hero-splash h1 {
+      font-size: 36px; } }
+.project-detail .meta h4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px; }
+.project-detail .meta .social {
+  padding: 0; }
+  .project-detail .meta .social li {
+    display: inline-block;
+    margin-right: 10px; }
+    .project-detail .meta .social li a {
+      color: #c4c4c4;
+      -webkit-transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -ms-transition: color 0.5s;
+      -o-transition: color 0.5s;
+      transition: color 0.5s; }
+      .project-detail .meta .social li a:hover {
+        color: #d67c79; }
+.project-detail .info h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b4b4b;
+  letter-spacing: 1px;
+  margin-bottom: 30px; }
+@media (max-width: 992px) {
+  .project-detail .info h4 + p {
+    margin-bottom: 30px; } }
+.project-detail .pagination {
+  display: block;
+  margin: 100px 0 0 0;
+  padding: 30px 0 0 0;
+  border-top: 1px solid #f1f1f1;
+  border-radius: 0;
+  font-size: 18px; }
+  .project-detail .pagination a {
+    color: #e5e5e5; }
+    .project-detail .pagination a:hover {
+      color: #c5c5c5; }
+  .project-detail .pagination .arrow {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 37px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #e5e5e5; }
+    .project-detail .pagination .arrow:hover {
+      border-color: #c5c5c5; }
+
+/* -----------------------------------------------------------------------------
+// 6. Contact Page
+// ----------------------------------------------------------------------------- */
+.contact-page .hero-title {
+  background-image: url(http://placehold.it/1895x800); }
+.contact-page .info h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #4b4b4b;
+  font-size: 20px; }
+.contact-page .info p {
+  margin-bottom: 20px; }
+.contact-page .info .list {
+  margin-top: 20px; }
+  .contact-page .info .list li {
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+    color: #181818; }
+.contact-page .contact {
+  padding: 35px;
+  background-color: #f9f9f9; }
+  .contact-page .contact:before, .contact-page .contact:after {
+    content: " ";
+    display: table; }
+  .contact-page .contact:after {
+    clear: both; }
+  .contact-page .contact h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #4b4b4b;
+    margin-bottom: 30px; }
+    .contact-page .contact h2 + p {
+      margin-bottom: 30px; }
+@media (max-width: 992px) {
+  .contact-page .contact {
+    margin-top: 50px; } }
+.contact-page .contact-form label {
+  color: #4b4b4b;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif; }
+  .contact-page .contact-form label em {
+    color: #d67c79; }
+.contact-page .contact-form .form-control {
+  margin-bottom: 15px;
+  background-color: #fff;
+  border: none; }
+  .contact-page .contact-form .form-control:focus {
+    border-color: #d67c79; }
+.contact-page .contact-form textarea {
+  height: 200px; }
+.contact-page .contact-map #map {
+  width: 100%;
+  height: 400px;
+  z-index: 0;
+  position: relative; }
+.contact-page .clients {
+  padding: 80px 0; }
+  .contact-page .clients img {
+    opacity: .5;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+    .contact-page .clients img:hover {
+      opacity: 1; }
+  @media (max-width: 992px) {
+    .contact-page .clients img {
+      margin-bottom: 30px; } }
+
+/*# sourceMappingURL=pages.css.map */

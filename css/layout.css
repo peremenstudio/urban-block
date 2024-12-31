@@ -1,0 +1,70 @@
+/*
+// Table of content
+// -----------------------------------------------------------------------------
+// - 1. Header
+// - 2. Footer
+// - 3. Hero Title
+*/
+/* -----------------------------------------------------------------------------
+// 1. Header 
+// ----------------------------------------------------------------------------- */
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1; }
+
+/* -----------------------------------------------------------------------------
+// 2. Footer 
+// ----------------------------------------------------------------------------- */
+footer {
+  background-color: #242424;
+  color: #717171; }
+  footer .footer-main {
+    padding: 100px 0; }
+    @media (max-width: 992px) {
+      footer .footer-main .col {
+        margin-bottom: 50px; } }
+  footer h3 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #d67c79; }
+  footer .list i {
+    display: inline-block;
+    position: relative;
+    bottom: -2px;
+    margin-right: 8px; }
+  footer .projects img {
+    width: 22%;
+    margin: 0 1.5% 10px 0; }
+  footer .footer-copyright {
+    padding: 15px 0;
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase; }
+
+/* -----------------------------------------------------------------------------
+// 3. Hero Title 
+// ----------------------------------------------------------------------------- */
+.hero-title {
+  padding: 200px 0 100px 0;
+  background-color: #aeaeae;
+  text-align: center;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .hero-title h2 {
+    padding: 0 0 40px 0;
+    font-size: 48px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500; }
+
+/*# sourceMappingURL=layout.css.map */

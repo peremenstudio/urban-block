@@ -1,0 +1,160 @@
+/* -----------------------------------------------------------------------------
+// 5. Project Detail Page
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Section Headline
+// - Section 1 - Hero Splash
+// - Section 2 - Meta
+
+
+//
+// Project Detail Page
+// --------------------------------------------------
+.project-detail {
+
+// Section Headline
+// --------------------------------------------------
+    .section-headline {
+        margin-bottom: 50px;
+        text-align: center;
+
+        h4 {
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+
+
+// Section 1 - Hero Splash
+// --------------------------------------------------
+    .hero-splash {
+        position: relative;
+        height: 800px;
+        height: 100vh;
+        text-align: center;
+        font-family: $headings-font-family;
+        background: url(http://placehold.it/1895x1150) center center no-repeat;
+        -webkit-background-size: cover;
+           -moz-background-size: cover;
+            -ms-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+
+        // positioning it in the center
+        .align {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+
+            -webkit-transform: translateY(-50%);
+               -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                 -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+        }
+
+        h1 {
+            padding: 0 0 15px 0;
+            color: #fff;
+            font-size: 60px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        @media (max-width:768px){
+            h1 {
+                font-size: 36px;
+            }
+        }
+    }
+
+
+// Section 2 - Meta
+// --------------------------------------------------
+    .meta {
+        h4 {
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .social {
+            padding: 0;
+
+            li {
+                display: inline-block;
+                margin-right: 10px;
+
+                a {
+                    color: #c4c4c4;
+                    @include transition(color, .5s);
+
+                    &:hover {
+                        color: $brand-color;
+                    }
+                }   
+            }
+        }
+    }
+
+    // info 
+    .info {
+        h4 {
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 600;
+            color: #4b4b4b;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width:992px) {
+            h4 + p {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    // project pagination
+    .pagination {
+        display: block;
+        margin: 100px 0 0 0;
+        padding: 30px 0 0 0;
+        border-top: 1px solid #f1f1f1;
+        border-radius: 0;
+        font-size: 18px;
+
+        a {
+            color: #e5e5e5;
+
+            &:hover {
+                color: #c5c5c5;
+            }
+        }
+
+        .arrow {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 37px;
+            font-size: 18px;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+
+            &:hover {
+                border-color: #c5c5c5;
+            }
+        }
+    }
+}

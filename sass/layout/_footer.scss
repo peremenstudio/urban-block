@@ -1,0 +1,57 @@
+/* -----------------------------------------------------------------------------
+// 2. Footer 
+// ----------------------------------------------------------------------------- */
+
+// Table of content
+// -----------------------------------------------------------------------------
+// - General Footer Styles
+
+
+// General Footer Styles
+// --------------------------------------------------
+footer {
+	background-color: #242424;
+    color: #717171;
+
+    .footer-main {
+        padding: 100px 0;
+
+        @media (max-width:992px) {
+            .col {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    h3 {
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        color: $brand-color;
+    }
+
+    .list {
+        i {
+            display: inline-block;
+            position: relative;
+            bottom: -2px;
+            margin-right: 8px;
+        }
+    }
+
+    // projects column 
+    .projects {
+        img {
+            width: 22%;
+            margin: 0 1.5% 10px 0;
+        }
+    }
+    
+    .footer-copyright {
+        padding: 15px 0;
+        font-family: $links-font-family;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,299 @@
+/* -----------------------------------------------------------------------------
+// 1. Homepage
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Section Headline
+// - SECTION 1 - Hero Splash
+// - Section 3 - Banner
+// - Section 4 - Gallery
+// - Section 5 - Testimonials
+// - Section 6 - Client
+
+
+//
+// Homepage
+// --------------------------------------------------
+.homepage {
+
+// Section Headline
+// --------------------------------------------------
+    .section-headline {
+        margin-bottom: 50px;
+        text-align: center;
+
+        h4 {
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+
+
+// Section 1 - Hero Splash
+// --------------------------------------------------
+    .hero-splash {
+        position: relative;
+        height: 800px;
+        height: 100vh;
+        overflow: hidden;
+        text-align: center;
+        font-family: $headings-font-family;
+
+        .splash-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            @media (max-width:992px) {
+                img {
+                    max-width: initial;
+                }
+            }
+        }
+        // positioning it in the center
+        .align {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+
+            -webkit-transform: translateY(-50%);
+               -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                 -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+        }
+
+        h1 {
+            padding: 0 0 15px 0;
+            color: #fff;
+            font-size: 72px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            small {
+                display: block;
+                margin-bottom: 15px;
+                text-transform: none;
+                color: #fff;
+                font-size: 50%;
+            }
+        }
+
+        .btn-light {
+            margin-left: 10px;
+            color: $brand-color;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        @media (max-width:768px){
+            h1 {
+                font-size: 36px;
+            }
+        }
+    }
+
+
+// Section 3 - Banner
+// --------------------------------------------------
+    .banner {
+
+        .banner-images {
+            @include clearfix();
+        }
+
+        img + img {
+            margin-left: 20px;
+        }
+
+        h3 {
+            margin: 0 0 30px 0;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        p + p {
+            margin-top: 30px;
+        }
+
+        .btn {
+            margin: 30px 10px 0 0;
+        }
+
+        @media (max-width:1200px) {
+            .banner-images {
+                margin-bottom: 30px;
+            }
+
+            img {
+                width: 45%;
+                float: left;
+
+                & + img {
+                    margin-left: 10%;
+                }
+            }
+        }
+    }
+
+
+// Section 4 - Counters
+// --------------------------------------------------
+    .counters {
+        padding: 150px 0;
+        background: url(http://placehold.it/1895x500) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        .progress-item {
+            text-align: center;
+
+            strong {
+                font-family: $headings-font-family;
+                position: absolute;
+                top: 55px;
+                right: 0;
+                left: 0;
+                color: #fff;
+                font-weight: 500;
+                font-size: 30px;
+            }
+
+            h4 {
+                margin-top: 40px;
+                font-size: 14px;
+                font-weight: 500;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+
+        @media (max-width:992px) {
+            .progress-item {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+
+// Section 5 - Gallery
+// --------------------------------------------------
+    .gallery {
+        .item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+
+            .caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background-color: $brand-color;
+                background-color: rgba(214, 124, 121, .85);
+                text-align: center;
+
+                @include transition(opacity, .5s);
+            }
+
+            a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 38px;
+                margin-right: 5px;
+                text-align: center;
+                color: #fff;
+                border: 2px solid #fff;
+                border-radius: 100%;
+
+                @include transition(background-color, .5s);
+
+                &:hover {
+                    background-color: #fff;
+                    border-color: #fff;
+                    color: $brand-color;
+                }
+            }
+
+            .align {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                -webkit-transform: translate(-50%, -50%);
+                   -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                     -o-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+            }
+
+            h3 {
+                margin-top: 30px;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: #fff;
+            }
+
+            // item on hover
+            &:hover {
+                .caption {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+// Section 5 - Testimonials
+// --------------------------------------------------
+    .testimonials {
+        .section-headline {
+            margin-bottom: 30px;
+        }
+    }
+
+
+// Section 6 - Clients
+// --------------------------------------------------
+    .clients {
+        padding: 80px 0;
+
+        img {
+            opacity: .5;
+            @include transition(opacity, .5s);
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        @media(max-width: 992px){
+            img {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+/* -----------------------------------------------------------------------------
+// 4. Projects Page
+// ----------------------------------------------------------------------------- */
+
+//
+// Table of content
+// -----------------------------------------------------------------------------
+// - Section 1 - Hero Title
+// - Section 2 - Gallery
+
+
+//
+// Projects Page
+// --------------------------------------------------
+.projects {
+
+// Section 1 - Hero Title
+// --------------------------------------------------
+    .hero-title {
+         background-image: url(http://placehold.it/1895x800);
+    }
+    
+// Section 2 - Gallery
+// --------------------------------------------------
+    .gallery {
+        .item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+
+            .caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background-color: $brand-color;
+                background-color: rgba(214, 124, 121, .85);
+                text-align: center;
+
+                @include transition(opacity, .5s);
+            }
+
+            a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 38px;
+                margin-right: 5px;
+                text-align: center;
+                color: #fff;
+                border: 2px solid #fff;
+                border-radius: 100%;
+
+                @include transition(background-color, .5s);
+
+                &:hover {
+                    background-color: #fff;
+                    border-color: #fff;
+                    color: $brand-color;
+                }
+            }
+
+            .align {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                -webkit-transform: translate(-50%, -50%);
+                   -moz-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                     -o-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+            }
+
+            h3 {
+                margin-top: 30px;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: #fff;
+            }
+
+            // item on hover
+            &:hover {
+                .caption {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
