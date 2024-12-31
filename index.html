@@ -3,33 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Morphocode-Inspired Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Welcome to My Website</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #map {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            background: #f8f8f8;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        nav a:hover {
+            background: #ddd;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 80px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            width: 200px;
+        }
+
+        .map-overlay label {
+            font-weight: bold;
+        }
+
+        .map-overlay input {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to My Website</h1>
         <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#map">Map</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>This is a simple website inspired by Morphocode's design.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Here are some of my projects.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
-    <script src="script.js"></script>
+    <div id="map"></div>
+    <div class="map-overlay">
+        <label>Layer Opacity: <span id="slider-value">100%</span></label>
+        <input id="slider" type="range" min="0" max="100" value="100">
+    </div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYXBlcmVtZW4iLCJhIjoiY2p2M2g3N2Y4MDk2bDRlcDJ2Y3R0dnNocCJ9.oMUpX3SDvmCFGW1o9qkzoQ';
+
+        // Initialize Mapbox map
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [34.764706, 31.530903],
+            zoom: 9
+        });
+
+        const layers = [
+            {
+                id: 'museums',
+                source: {
+                    type: 'vector',
+                    url: 'mapbox://mapbox.2opop9hr'
+                },
+                layout: 'visible',
+                paint: {
+                    'circle-radius': 8,
+                    'circle-color': 'rgba(55,148,179,1)'
+                }
+            },
+            {
+                id: 'articles',
+                source: {
+                    type: 'vector',
+                    url: 'mapbox://aperemen.3udmgcyl'
+                },
+                layout: 'none',
+                paint: {
+                    'circle-radius': 6,
+                    'circle-color': 'rgba(245,183,39,0.8)'
+                }
+            }
+        ];
+
+        map.on('load', () => {
+            layers.forEach(layer => {
+                map.addSource(layer.id, layer.source);
+                map.addLayer({
+                    id: layer.id,
+                    type: 'circle',
+                    source: layer.id,
+                    layout: {
+                        visibility: layer.layout
+                    },
+                    paint: layer.paint
+                });
+            });
+        });
+
+        // Redirect to new page on map click
+        map.on('click', () => {
+            window.location.href = 'newpage.html';
+        });
+
+        // Opacity slider functionality
+        const slider = document.getElementById('slider');
+        const sliderValue = document.getElementById('slider-value');
+
+        slider.addEventListener('input', (e) => {
+            const value = parseInt(e.target.value, 10) / 100;
+            sliderValue.textContent = `${e.target.value}%`;
+
+            layers.forEach(layer => {
+                map.setPaintProperty(layer.id, 'circle-opacity', value);
+            });
+        });
+    </script>
 </body>
 </html>
